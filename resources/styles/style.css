@@ -1,3 +1,114 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-position-x: center;
+    background-size: cover;
+}
+
+.grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template: repeat(24, 2.5rem) / repeat(12, 1fr);
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-area: 1 / 1 / 4 / 13;
+}
+
+h1.header {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgb(255, 0, 136);
+    max-width: 100%;
+}
+
+h2.header {
+    font-family: 'Kristi', cursive;
+    color: rgb(255, 255, 0);
+    background-color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    grid-area: 2 / 3 / 3 / 8;
+}
+
+.goss {
+    text-align: center;
+    grid-area: 3 / 4 / 5 / 7;
+}
+
+.club {
+    text-align: center;
+    grid-area: 2 / 7 / 4 / 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: rgba(255, 0, 136, 0.5);
+    padding: 1.5rem;
+    grid-area: 4 / 1 / 22 / 3;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav li {
+    width: 100%
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: rgb(255, 255, 0);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(192, 192, 192), rgb(60, 60, 60));
+    padding: 0.5rem 0;
+    border: 0.0625rem solid rgb(48, 48, 48);
+    border-radius: 0.5rem;
+    width: 100%;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5), 0 -0.125rem 0.25rem rgba(255, 255, 255, 0.4) inset, 
+    0 0.125rem 0.25rem rgba(255, 255, 255, 0.8) inset;
+    text-shadow: 0 -0.125rem rgb(155, 155, 0);
+    outline: 0 !important; /*to remove yellow dotted outline - very stubborn, maybe remove it if active links are in?*/
+}
+
+nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+nav a:hover {
+    background-image: linear-gradient(rgb(150, 150, 150), rgb(48, 48, 48));
+    border-color: rgb(24, 24, 24);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25), 0 -0.125rem 0.25rem rgba(255, 255, 255, 0.2) inset,
+    0 0.125rem 0.25rem rgba(255, 255, 255, 0.4) inset;
+}
+
+nav a:active {
+    background-image: linear-gradient(rgb(48, 48, 48), rgb(150, 150, 150)); /*finish styling of active buttons!*/
+}
+
+.icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    margin: 1rem 0;
+}
