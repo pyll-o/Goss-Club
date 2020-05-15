@@ -51,6 +51,7 @@ html {
     .grid {
         grid-template: repeat(48, 2.5rem) / repeat(12, 1fr);
         background-image: none;
+        overflow-x: hidden;
     }
 }
 
@@ -217,7 +218,7 @@ p.testimonial {
     font-family: 'Kristi', cursive;
     font-size: 2rem;
     line-height: 1.4;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     z-index: 3;
 }
 
@@ -275,35 +276,152 @@ div.testimonial {
     }
 }
 
+.img {
+    background-image: url(../images/goss2_lrg.jpg);
+    background-size: 100%;
+    grid-area: 11 / 3 / 22 / 8;
+}
+
 .description {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     grid-area: 11 / 3 / 22 / 8;
-    background-image: url(../images/goss2_lrg.jpg);
-    background-size: 100%;
+    background-color: rgba(60, 60, 60, 0.35);
     font-family: 'Montserrat', sans-serif;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgb(255, 255, 0);
     padding: 2rem 1rem;
+    line-height: 1.5;
 }
 
 .description h3 {
-    font-size: 1.625rem;
+    font-size: 1.875rem;
     font-weight: 600;
     grid-area: 11 / 4 / 12 / 8;
+    text-align: center;
 }
 
 .description p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    
+}
+
+.description a {
+    color: rgb(255, 0, 136);
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (min-width:861px) and (max-width: 1100px) {
+    .img,
+    .description {
+        grid-area: 11 / 2 / 22 / 8;
+    }
+}
+
+@media only screen and (min-width: 621px) and (max-width: 860px) {
+    .img,
+    .description {
+        grid-area: 12 / 2 / 22 / 10;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .img {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .description {
+        background-color: rgba(60, 60, 60, 0.5);
+        grid-area: 8 / 1 / 35 / 13;
+        z-index: 10;
+    }
+
+    .description h3 {
+        font-size: 2.5rem;
+    }
+
+    .description p {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 561px) and (max-width: 620px) {
+    .juicy-goss {
+        grid-area: 8 / 1 / 20 / 7;
+    }
+
+    .goss-club {
+        grid-area: 23 / 7 / 35 / 13;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 560px) {
+    .juicy-goss {
+        grid-area: 8 / 1 / 20 / 7;
+    }
+
+    .goss-club {
+        grid-area: 21 / 6 / 32 / 13;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 500px) {
+    .juicy-goss {
+        grid-area: 8 / 1 / 20 / 7;
+    }
+
+    .goss-club {
+        grid-area: 20 / 5 / 32 / 13;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .juicy-goss {
+        grid-area: 8 / 1 / 20 / 7;
+    }
+
+    .goss-club {
+        grid-area: 20 / 4 / 32 / 13;
+    }
 }
 
 footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.8);
     background-color: rgba(0, 0, 0, 0.95);
     grid-area: 22 / 1 / 25 / 13;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p {
+    font-size: 1rem;    
+}
+
+footer h5 {
+    font-size: 0.75rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 620px) {
     footer {
         grid-area: 45 / 1 / 49 / 13;
     }
-}ans
+}
