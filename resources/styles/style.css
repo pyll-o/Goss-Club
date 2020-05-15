@@ -49,7 +49,8 @@ html {
 
 @media only screen and (max-width: 620px) {
     .grid {
-        grid-template: repeat(32, 2.5rem) / repeat(12, 1fr);
+        grid-template: repeat(48, 2.5rem) / repeat(12, 1fr);
+        background-image: none;
     }
 }
 
@@ -184,6 +185,10 @@ nav a:active {
 }
 
 @media only screen and (max-width: 1100px) {
+    nav {
+        grid-area: 4 / 1 / 22 / 2;
+    }
+    
     .small {
         display: block;
     }
@@ -195,8 +200,8 @@ nav a:active {
 
 @media only screen and (max-width: 620px) {
     nav {
-        grid-area: 5 / 1 / 9 / 13;
-        align-items: flex-end;
+        grid-area: 5 / 1 / 8 / 13;
+        align-items: center;
     }
 
     nav ul {
@@ -246,26 +251,7 @@ div.testimonial {
     }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 620px) {
-    p.testimonial {
-        font-size: 2.25rem;
-    }
-
-    .ron {
-        grid-area: 10 / 9 / 19 / 13;
-    }
-
-    .karen {
-        grid-area: 19 / 9 / 27 / 13;
-    }
-
-    div.testimonial {
-        grid-area: 9 / 9 / 26 / 13;
-        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9), transparent); 
-    }
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 620px) {
     p.testimonial {
         font-size: 2.5rem;
     }
@@ -275,21 +261,49 @@ div.testimonial {
     }
 
     .ron {
-        grid-area: 10 / 1 / 18 / 7;
+        grid-area: 36 / 1 / 44 / 7;
     }
 
     .karen {
-        grid-area: 10 / 8 / 18 / 13;
+        grid-area: 36 / 8 / 44 / 13;
     }
 
     div.testimonial {
-        grid-area: 9 / 1 / 19 / 13;
+        grid-area: 35 / 1 / 45 / 13;
         background-image: none;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 0, 0.3);
     }
 }
 
+.description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    grid-area: 11 / 3 / 22 / 8;
+    background-image: url(../images/goss2_lrg.jpg);
+    background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 2rem 1rem;
+}
+
+.description h3 {
+    font-size: 1.625rem;
+    font-weight: 600;
+    grid-area: 11 / 4 / 12 / 8;
+}
+
+.description p {
+    font-size: 1.25rem;
+}
+
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95);
     grid-area: 22 / 1 / 25 / 13;
 }
+
+@media only screen and (max-width: 620px) {
+    footer {
+        grid-area: 45 / 1 / 49 / 13;
+    }
+}ans
